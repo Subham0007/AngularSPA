@@ -1,6 +1,8 @@
 # AngularSPA
 Demo project for angular SPA pratice
-change the branch to see the different versions of the demo project.
+
+<change the branch to see the different versions of the demo project.>
+  
 #html pages(total 5)
 1. index.html is my landing page.
 2. i made another 3 pages that will be reused for routing purpose.
@@ -8,6 +10,7 @@ change the branch to see the different versions of the demo project.
 4. Then we can route to another 2 pages called VALIDATION-FORM.html and about.html .
 5. In VALIDATION-FORM.html we can store data to our browser local storage, you can check that.
 6. in about.html the is 1 paragraph about the school.
+
 #.js page(1 page)
 7. i used app.config for the purpose of routing to different pages.
 8. then i used app.controller for the validation and storage of inputs from VALIDATION-FORM.html . 
