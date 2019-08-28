@@ -74,7 +74,7 @@
          <!-- DOB -->
             <div>
                <label for="dob"><h5>DOB:&nbsp;&nbsp;</h5></label> 
-               <input type="date" name="today" ng-model="user.today" value="2019-07-08" min="1996-01-01" max="2019-12-31" required>
+               <input type="date" name="today" ng-model="user.today" value="2019-07-08" min="1996-01-01" max="2013-12-31" required>
             </div>
         
          <!-- Gender --> 

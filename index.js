@@ -15,10 +15,9 @@ app.config(function($routeProvider) {
 });
 
 
-
 app.controller('mainController', function($scope){
     
-    $scope.user={"name":"" ,"username":"","email":"","today":"","gender":""};
+    $scope.user={};
     $scope.Data=[];
     $scope.originalStudent = ["Male","Female","Others"];
     $scope.arrlist = [
@@ -27,22 +26,28 @@ app.controller('mainController', function($scope){
              {"userid": 2,
              "name": "Science"}, 
              {"userid": 3,
-             "name": "History"}];
+             "name": "History"}
+                    ];
+    $scope.getdata=function(){
+           $scope.storage=JSON.parse(localStorage.getItem("UserData"));
+           $scope.Data = ($scope.storage.length>1) ? $scope.storage : [];
+                                };
+    
+    
     $scope.submitForm= function() {
 
 			if ($scope.userForm.$valid) {
 				alert('Thankyou For Your Submission');
                  $scope.Data.push($scope.user);
-                localStorage.setItem('UserData', JSON.stringify($scope.Data)); 
-            
-            };
-       
-			
-           };
+             localStorage.setItem("UserData", JSON.stringify($scope.Data));
+                $scope.user={};
+              
+                                        }
+        
+                                   };
+
     
-       /*$scope.getdata=function(){
-           $scope.storage=JSON.parse(localStorage.getItem("UserData"));
-           $scope.Data=($scope.storage.length>1) ? $scope.storage : [];
-       }();*/
     
-});
+})
+
+
