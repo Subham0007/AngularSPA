@@ -1,5 +1,6 @@
 # AngularSPA
 Demo project for angular SPA pratice
+change the branch to see the different versions of the demo project.
 #html pages(total 5)
 1. index.html is my landing page.
 2. i made another 3 pages that will be reused for routing purpose.
@@ -10,3 +11,5 @@ Demo project for angular SPA pratice
 #.js page(1 page)
 7. i used app.config for the purpose of routing to different pages.
 8. then i used app.controller for the validation and storage of inputs from VALIDATION-FORM.html . 
+
+thank you.
