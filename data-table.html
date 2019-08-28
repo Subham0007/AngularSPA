@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+         <script src="https://code.angularjs.org/1.6.9/angular-route.js"></script>
+         <script src="https://code.angularjs.org/1.6.9/angular.min.js"></script>
+         <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+        <script src="index.js"></script>
+          
+    </head>
+
+<body>
+
+<div ng-app="myApp" ng-controller="mainController">
+ <table>
+     <select ng-model="gender" ng-options="item for item in originalStudent"></select>
+</table>
+</div>
+</body>
+</html>

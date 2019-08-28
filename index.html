@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+        
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+        <script src="index.js">
+        </script>
+        <style>
+           
+        
+            nav{
+                
+                border: 4px solid grey;
+                  margin-top: 15px;
+                  margin-bottom: 15px;
+                  margin-right: 60px;
+                  margin-left: 60px;
+                  padding: 10px 10px;
+                font-family: fantasy;
+                font-size: 40px;
+                  text-align: center;
+                }
+          
+            
+        
+        </style>
+    </head>
+<body ng-app="myApp" >
+<nav>
+<a href="#/!">HOME |</a>
+<a href="#!banana">STUDENT REGISTRATION  |</a>
+<a href="#!tomato">ABOUT</a>
+    </nav>
+
+
+
+<div ng-view></div>
+
+
+
+</body>
+</html>

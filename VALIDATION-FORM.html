@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+         <script src="https://code.angularjs.org/1.6.9/angular-route.js"></script>
+         <script src="https://code.angularjs.org/1.6.9/angular.min.js"></script>
+         <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+        <script src="index.js"></script>
+           <style>
+           
+            form{
+                  border: 2px solid grey;
+                  margin-top: 20px;
+                  margin-bottom: 20px;
+                  margin-right: 130px;
+                  margin-left: 130px;
+                  padding: 10px 10px;
+                  text-align: left;
+                }
+             
+           h1{
+                font-family: fantasy;
+                color: black;
+                padding: 10px 10px;
+                text-align-last: center;
+                border: 2px solid grey;
+                margin-right: 130px;
+                margin-left: 130px;
+                  margin-top: 5px;
+                }
+           
+        </style>
+        
+   </head>
+<body>
+    
+<div ng-app="myApp" ng-controller="mainController">
+
+       <h1>STUDENT REGISTRATION</h1> 
+ 
+    <!-- FORM ============ -->
+  
+    <form name="userForm"  ng-init="getdata()" novalidate>
+
+        <!-- NAME -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+            <label><h5>Name</h5></label>
+            <input type="text" name="name" class="form-control" ng-model="user.name" required>
+            <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">You name is required.</p>
+        </div>
+      
+        <!-- USERNAME -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
+            <label><h5>Username</h5></label>
+            <input type="text" name="username" class="form-control" ng-model="user.username" ng-minlength="3" ng-maxlength="8">
+            <p ng-show="userForm.username.$error.minlength" class="help-block">Username is too short.</p>
+            <p ng-show="userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
+        </div>
+        
+        <!-- EMAIL -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+            <label><h5>Email</h5></label>
+            <input type="email" name="email" class="form-control" ng-model="user.email">
+            <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+        </div>
+        
+         <!-- DOB -->
+            <div>
+               <label for="dob"><h5>DOB:&nbsp;&nbsp;</h5></label> 
+               <input type="date" name="today" ng-model="user.today" value="2019-07-08" min="1996-01-01" max="2013-12-31" required>
+            </div>
+        
+         <!-- Gender --> 
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <label class="input-group-text" for="gender">Gender:</label>
+            </div>
+            <select class="custom-select" id="gender" ng-model="user.gender"  ng-options="item for item in originalStudent" required>
+            </select>
+            </div>
+        
+        
+             <h5>Favourite Subject:</h5>
+             <div ng-repeat="user in arrlist">
+            <input type="radio" name="userdetails"  value="{{user.userid}}" ng-model="user.subject" required />
+              <label>{{user.name}}</label>
+                   </div>
+        
+              <h5>Add Comments:</h5>
+                <label>Comment:
+                     <input type="checkbox" ng-model="user.value1">
+                </label>
+                <label>Review:
+                     <input type="checkbox" ng-model="user.value2">
+                </label><br>
+        <div ng-show="user.value1">
+                <input type="text" name="comment" class="form-control" ng-model="user.comment">
+        </div>
+        <div ng-show="user.value2"><br>
+            <h6>min=1, max=5</h6>
+                <input type="number" name="review" class="form-control" ng-model="user.review" min="1" max="5" >
+        </div><br>
+        
+        <button ng-click="submitForm()" class="btn  btn-outline-dark  btn-lg btn-block" ng-disabled="userForm.$invalid">Submit</button>
+        <button type="reset" name="reset" value="reset" class="btn  btn-outline-warning  btn-lg btn-block" ng-click="resetForm()" >Reset</button>
+    </form>
+    
+   
+    
+</div>
+</body>
+</html>
