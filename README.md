@@ -12,7 +12,9 @@ change the branch to see the different versions of this demo project.
 6. in about.html the is 1 paragraph about the school.
 
 #.js page(1 page)
+
 7. i used app.config for the purpose of routing to different pages.
+
 8. then i used app.controller for the validation and storage of inputs from VALIDATION-FORM.html . 
 
 thank you.
