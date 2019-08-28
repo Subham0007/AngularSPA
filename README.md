@@ -14,6 +14,6 @@ Demo project for angular SPA pratice
 fix:-
 1. Updated the UI a little bit.
 2. fixed an issue related to localstorage in browser.
--->previously the latest value inserted in the form was ovverriding the current stored data,
+-->previously the latest value inserted in the form was overriding the current stored data,
 now its fixed....you can see individual form insert data.
 
