@@ -11,3 +11,9 @@ Demo project for angular SPA pratice
 7. i used app.config for the purpose of routing to different pages.
 8. then i used app.controller for the validation and storage of inputs from VALIDATION-FORM.html . 
 
+fix:-
+1. Updated the UI a little bit.
+2. fixed an issue related to localstorage in browser.
+-->previously the latest value inserted in the form was ovverriding the current stored data,
+now its fixed....you can see individual form insert data.
+
