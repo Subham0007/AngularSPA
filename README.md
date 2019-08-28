@@ -11,3 +11,6 @@ Demo project for angular SPA pratice
 7. i used app.config for the purpose of routing to different pages.
 8. then i used app.controller for the validation and storage of inputs from VALIDATION-FORM.html . 
 
+fix:-
+1. modified the ng-model of radio button, as it was disabling the submit button.
+
