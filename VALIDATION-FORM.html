@@ -71,7 +71,7 @@
          <!-- DOB -->
             <div>
                <label for="dob"><h5>DOB:&nbsp;&nbsp;</h5></label> 
-               <input type="date" name="today" ng-model="user.today" value="2019-07-08" min="1996-01-01" max="2013-12-31" required>
+               <input type="date" name="today" ng-model="user.today" value="2019-07-08"  required>
             </div>
         
          <!-- Gender --> 
@@ -86,7 +86,7 @@
         
              <h5>Favourite Subject:</h5>
              <div ng-repeat="user in arrlist">
-            <input type="radio" name="userdetails"  value="{{user.userid}}" ng-model="user.subject" required />
+            <input type="radio" name="userdetails"  value="{{user.userid}}" ng-model="$parent.selectedPerson" required />
               <label>{{user.name}}</label>
                    </div>
         
