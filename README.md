@@ -1,7 +1,7 @@
 # AngularSPA
 Demo project for angular SPA pratice
 
-change the branch to see the different versions of the demo project.
+change the branch to see the different versions of this demo project.
   
 #html pages(total 5)
 1. index.html is my landing page.
